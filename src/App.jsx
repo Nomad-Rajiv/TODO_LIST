@@ -21,7 +21,7 @@ function App() {
  
   
   // for saving the todo list
-  const saveTodoList = () =>{
+  const saveTodoList = (params) =>{
     localStorage.setItem("todos", JSON.stringify(todos))
   }
 
@@ -78,18 +78,18 @@ function App() {
   return (
     <>
     <Navbar/>
-    <div className="container  my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh]">
+    <div className="container  my-5 rounded-xl p-5 bg-[#49499C] min-h-[80vh]">
       <div className="addTodo my-5">
-       <h2 className="text-lg font-bold">Add a Todo</h2>
+       <h2 className="text-lg font-bold text-white">Add a Todo</h2>
        
-       <input  type="text" className="w-1/2" onChange={handleChnage} value={todo}/>
-       <button className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-6 text-white" onClick={handleAdd}>Save</button>
+       <input  type="text" className="w-1/2 rounded-md" onChange={handleChnage} value={todo} />
+       <button className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-6 text-white border" onClick={handleAdd}>Save</button>
 
        
       </div>
-      <h2 className="text-lg font-bold">Your Todos</h2>
-      <div className="todos">
-        {todos.length === 0 && <div className="m-5">No Todos to Display</div>}
+      <h2 className="text-lg font-bold text-white">Your Todos</h2>
+      <div className="todos text-white">
+        {todos.length === 0 && <div className="m-5 text-white">No Todos to Display</div>}
         {todos.map(items => {
 
         
@@ -104,8 +104,8 @@ function App() {
 
             
           <div className="button flex h-full">
-            <button onClick={(e)=>{handleEdit(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white">Edit</button>
-            <button onClick={(e)=>{handleDelete(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white">Delete</button>
+            <button onClick={(e)=>{handleEdit(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border">Edit</button>
+            <button onClick={(e)=>{handleDelete(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border">Delete</button>
           </div>
 
         </div>
