@@ -83,7 +83,7 @@ function App() {
        <h2 className="text-lg font-bold text-white">Add a Todo</h2>
        
        <input  type="text" className="w-1/2 rounded-md" onChange={handleChnage} value={todo} />
-       <button className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-6 text-white border" onClick={handleAdd}>Save</button>
+       <button className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-6 text-white border " onClick={handleAdd}>Save</button>
 
        
       </div>
@@ -104,8 +104,8 @@ function App() {
 
             
           <div className="button flex h-full">
-            <button onClick={(e)=>{handleEdit(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border">Edit</button>
-            <button onClick={(e)=>{handleDelete(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border">Delete</button>
+            <button onClick={(e)=>{handleEdit(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border hover:border-none">Edit</button>
+            <button onClick={(e)=>{handleDelete(e, items.id)}} className="bg-violet-800 hover:bg-violet-950 p-2 text-sm font-bold py-1 rounded-md mx-1 text-white border hover:border-none">Delete</button>
           </div>
 
         </div>
